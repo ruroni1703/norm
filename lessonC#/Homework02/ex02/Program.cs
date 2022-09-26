@@ -24,7 +24,7 @@ else if (-999 <= n && n <= 999)
     Console.WriteLine(a);
 }
 
-else if (-9999 <= n && n <= 9999)
+else if (-9999 <= n && n <= 9999)                                                                                                                     
 {
     int a = n % 100;
     int b = a / 10;
