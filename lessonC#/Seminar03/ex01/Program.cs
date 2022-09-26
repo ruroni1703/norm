@@ -1,4 +1,4 @@
-﻿// Дан массив, нужносформировать новый массив 
+﻿/* // Дан массив, нужносформировать новый массив 
 //из четных чисел
 
 // 1 Задать количество элементов
@@ -23,14 +23,24 @@ for (int i = 0; i < size; i ++)
     source[i] = new Random().Next(1, 10);
 }
 
+
 // 4 Распечатать исходный массив
 for (int i = 0; i < size; i ++)
 {
     Console.Write(source[i] + " ");
 }
-#endregion
 
-// 5 Найти количество четных чисел в исходном массиве
+/*  если делать через цикл while то будет так
+int i = 0;   
+while (i< size)
+{
+    source[i] = new Random().Next(1, 10);
+    Console.Write(source[i] + " ");
+    i++;
+} */
+/* #endregion */
+
+/* // 5 Найти количество четных чисел в исходном массиве
 int count = 0;
 for (int i = 0; i < size; i ++)
 {
@@ -60,4 +70,4 @@ for (int i = 0; i < count; i ++)
 {
     Console.Write(evenitems[i] + " ");
 }
-Console.WriteLine();
+Console.WriteLine();  */
