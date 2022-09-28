@@ -7,6 +7,22 @@
 
 32679 -> 6 */
 
+/* int a = 989;
+Console.WriteLine(a);
+if (a<0) a =-a;
+Console.WriteLine(a);
+if (a >= 100)
+{
+    while( a < 999)
+    {
+        a = a / 10;
+    }
+    Console.WriteLine(a%10)
+}
+ */
+
+
+
 Console.Clear();
 Console.WriteLine("Введите число n :");
 int n = Convert.ToInt32(Console.ReadLine());
