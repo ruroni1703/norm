@@ -46,7 +46,7 @@ void Create(int[] el)
 }
 
 // вывод исходных числе и кубов
-int[] arr = FillArray(size);
+int[] arr = FillArray();
 Console.WriteLine($"Таблица чисел от 1 до {number} :");
 Console.WriteLine(String.Join('|', arr));
 Create(arr);
