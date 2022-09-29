@@ -1,3 +1,9 @@
+// /* Задача 23
+// Напишите метод, который принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+
+// 3 -> 1, 8, 27
+// 5 -> 1, 8, 27, 64, 125   решение подсказали*/  
+
 int number;
 
 // метод получения числа
@@ -43,7 +49,7 @@ int[] Create(int[] el)
 
 Console.Write("Введите число n: ");
 number = Convert.ToInt32(Console.ReadLine());
-// вывод исходных числе и кубов
+
 
 // Здесь мы создаем массив arr из number элементов, пока он будет заполнен нулями!
 int[] arr = CreateArray(number);
@@ -51,13 +57,15 @@ int[] arr = CreateArray(number);
 FillArray(arr);
 // Выводим массив в консоль
 for(int i = 0; i < arr.Length; i++) {
-    Console.Write($"{arr[i]}\t|");
+    Console.Write($"{arr[i]}\t|"); Console.WriteLine($"Таблица чисел от 1 до {number}");
 }
 Console.WriteLine("\b"); // форматирование вывода
 
 // Теперь нам остается ввести новый массив и вызвать метод Create;
 int[] newArr = Create(arr);
-for(int i = 0; i < newArr.Length; i++) {
-    Console.Write($"{newArr[i]}\t|");
+for(int i = 0; i < newArr.Length; i++) 
+{
+    
+    Console.Write($"{newArr[i]}\t|"); Console.WriteLine($"Таблица кубов от 1 до {number}");
 }
 Console.WriteLine("\b");
