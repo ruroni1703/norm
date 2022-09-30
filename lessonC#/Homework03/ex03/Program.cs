@@ -7,7 +7,7 @@
 //и начинается с нуля все, так и не смог разобраться() */   
 
 Console.Clear();
-Console.WriteLine("Введите число n:");
+/* Console.WriteLine("Введите число n:");
 int number = Convert.ToInt32(Console.ReadLine());
 // метод получения числа
 int GetIntNum(int number)
@@ -21,16 +21,19 @@ int[] CreateArray(int size)
 {
     size = number + 1;
     return new int[size];
-}
+} */
 
 //  метод заполнения массива 
-void FillArray(int[] array)
+int[] FillArray();
 {
+    int number = Convert.ToInt32(Console.ReadLine());
+    int[] array = new int[number];
     int size = array.Length;
     for (int i = 0; i < size; i++)
     {
         array[i] = number;
     }
+    return array;
   
 }
 
