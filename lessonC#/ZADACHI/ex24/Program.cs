@@ -17,7 +17,7 @@ int[] Create(int number)      // создали массив
 void Fill(int[] array)  // заполнение массива
 {
     int size = array.Length;
-    for (int i = 0; i < size; i++)
+    for (int i = 1; i < size; i++)
     {
         array[i] = i;
     }
@@ -49,8 +49,8 @@ Fill(arr);
 Console.WriteLine("Таблица чисел от 1 до N :");
 Console.WriteLine(Print(arr));
 Console.WriteLine("Таблица кубов от 1 до N :");
-//Console.WriteLine(String.Join("," , Cubb()));
+Console.WriteLine(String.Join("," , Cubb(number)));
 
-Console.WriteLine(Cubb(number));
+//Console.WriteLine(Cubb(number));
 
 

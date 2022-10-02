@@ -29,12 +29,11 @@ int[] FillArray();
     int number = Convert.ToInt32(Console.ReadLine());
     int[] array = new int[number];
     int size = array.Length;
-    for (int i = 0; i < size; i++)
+    for (int i = 1; i <= size; i++)
     {
-        array[i] = number;
+        array[i] = i;
     }
-    return array;
-  
+    return array;  
 }
 
 

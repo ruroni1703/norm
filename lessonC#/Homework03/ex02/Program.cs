@@ -29,5 +29,6 @@ int zb = Convert.ToInt32(Console.ReadLine());
 
 double X = Math.Sqrt(Math.Pow(xb - xa, 2) + Math.Pow(yb - ya, 2) + Math.Pow(zb - za, 2));
 
+double Y = Math.Round(X, 2);
 
-Console.WriteLine($"Расстояние между точками равно {X} ");
+Console.WriteLine($"Расстояние между точками равно {Y} ");
