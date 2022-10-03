@@ -17,9 +17,9 @@ int[] Create(int number)      // создали массив
 void Fill(int[] array)  // заполнение массива
 {
     int size = array.Length;
-    for (int i = 1; i < size; i++)
+    for (int i = 0; i < size; i++)
     {
-        array[i] = i;
+        array[i] = i+1;           // заполняет массив с 1 до N
     }
 }
 
@@ -29,28 +29,28 @@ string Print(int[] array)   // печать массива
 }
 
 
-double Cubb(int number)  // нахождение кубов
+int[] Cubb(int [] el)  // нахождение кубов
 {
 
-    double[] res = new double[number];
-    for (int i = 1; i < number; i++)
+    int SIZE = el.Length;
+    for (int i = 0; i < el.Length; i++)
     {
-        res[i] = Math.Pow(i + 1, 3);
+        el[i] = el[i] *el[i] *el[i];
     }
-    return res[number];
+    return el;
 }
 
 
 Console.WriteLine(" Введите число N :");
 int number = Convert.ToInt32(Console.ReadLine());
-int size = number + 1;
+int size = number;
 int[] arr = Create(size);
 Fill(arr);
 Console.WriteLine("Таблица чисел от 1 до N :");
 Console.WriteLine(Print(arr));
+int[] newarr = Cubb(arr);
 Console.WriteLine("Таблица кубов от 1 до N :");
-Console.WriteLine(String.Join("," , Cubb(number)));
+Console.WriteLine(Print(newarr));
 
-//Console.WriteLine(Cubb(number));
 
 
