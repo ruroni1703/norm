@@ -2,7 +2,7 @@
 Парой считаем первый и последний элемент, второй и предпоследний и т.д.
  Результат запишите в новом массиве */
 
- Console.Clear();
+Console.Clear();
 //1 2
 int[] CreateArray(int size, int min, int max)
 {
@@ -32,20 +32,20 @@ void PrintArray(int[] array)
 // 3 
 int[] MultiFirstLastNum(int[] array)
 {
-    
-    for (int i = 0; i < array.Length; i++)
+    int sizenew = array.Length / 2;
+    for (int i = 0; i < sizenew; i++)
     {
-        array[i] = 
+        array[i] = array[i] * array[array.Length - 1 - i];
 
     }
     return array;
 }
 
 
-int[] arr = CreateArray(15, -99, 100);
+int[] arr = CreateArray(6, 1, 10);
 Console.WriteLine();
 Console.WriteLine("Создан случайный массив :");
 PrintArray(arr);
-int [] InvertArrayNum = InvertArray(arr);
-Console.WriteLine("Массив с заменой положительных на отрицательные и наоборот :");
-PrintArray(InvertArrayNum);
+int[] multiFirstLastNum = MultiFirstLastNum(arr);
+Console.WriteLine("Массив перемножения пар чисел в исходном массиве   :");
+PrintArray(multiFirstLastNum);
