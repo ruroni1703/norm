@@ -5,19 +5,35 @@
 
 // 1, -7, 567, 89, 223-> 3
 
-Console.Write("Введите элементы(через пробел): ");
-int[] arr = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
-int count = 0;
+
+int GetValue(int min, int max) //Заполнение рандомными числами 
+{ 
+    return new Random().Next(min, max); 
+} 
  
-for (int i = 0; i < arr.Length; i++)
-{
-    if (arr[i] > 0)
-    {
-        count++;
-    }
+int[] CreateArray(int size)  //инициализируем массив 
+{ 
+    return new int[size]; 
+} 
+ 
+void FillArray(int[] array)//заполняем массив 
+{ 
+    int size = array.Length; 
+    for (int index = 0; index < size; index++) 
+    { 
+        array[index] = GetValue(-100, 101); 
+    } 
+} 
+ 
+string Print(int[] array) //выводим полученный массив на экран 
+{ 
+    return "[" + String.Join(',', array) + "]"; 
 }
- 
-Console.WriteLine($"Кол-во элементов > 0: {count}");
+
+
+int[] size = CreateArray( 15);
+FillArray(size);
+Print(size);
 
 
 
