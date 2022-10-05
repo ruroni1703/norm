@@ -35,27 +35,28 @@ void PrintArray(int[] array)
 
 }
 
-void Sum(int[] array)
-{
-    int sum = 0;
-    for (int i = 1; i < array.Length; i = i + 2)
-    {
-        sum = sum + array[i];
-    }
+// void Sum(int[] array)  //метод для суммы не вызывается()
+// {
+//     int sum = 0;
+//     for (int i = 1; i < array.Length; i = i + 2)
+//     {
+//         sum = sum + array[i];
+//     }
     
-}
+// }
 
 int[] arr = CreateArray(4, 1, 5);
 Console.WriteLine();
 Console.WriteLine("Создан случайный массив :");
 PrintArray(arr);
-
-//int[] newarr = CreateArray(4, 1, 5);
-//int sum = 0;
-// for (int i = 1; i < newarr.Length; i = i + 2)
-// {
-//     sum = sum + arr[i];
-// }
-
+int[] newarr = CreateArray(4, 1, 5);
+int sum = 0;
+for (int i = 1; i < newarr.Length; i = i + 2)
+{
+    sum = sum + arr[i];
+}
 Console.WriteLine("Сумма элементов на нечетных позициях равна :");
-Console.WriteLine(Sum);
+Console.WriteLine(sum);
+//int[] newarr = Sum();
+// Console.WriteLine("Сумма элементов на нечетных позициях равна :");
+// Console.WriteLine(newarr);

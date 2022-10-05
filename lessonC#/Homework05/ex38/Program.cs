@@ -10,7 +10,7 @@ void PrintArray(int[] array)
     Console.Write("[");
     for (int i = 0; i < array.Length; i++)
     {
-        if (i < array.Length - 1)  
+        if (i < array.Length - 1)
             Console.Write($"{array[i]},");
         else
             Console.Write($"{array[i]}");
@@ -19,18 +19,46 @@ void PrintArray(int[] array)
 
 }
 
-int FindMax(int max)
+int FindMax(int Max, int[] array)
 {
-    int i = 0;
-    int max = 0;
-    while ()
-    
+    int max = array[0];
+    for (int i = 1; i < array.Length; i++)
+    {
+        if (array[i] > max)
+        {
+            max = array[i];
+
+        }
+    }
+    return max;
 }
 
-int[] arr = {3,7,22,2,78};
+int FindMin(int Min, int[] array)
+{
+    int min = array[0];
+    for (int i = 1; i < array.Length; i++)
+    {
+        if (array[i] < min)
+        {
+            min = array[i];
+
+        }
+    }
+    return min;
+}
+int[] arr = { 3, 7, 22, 2, 78 };
 Console.WriteLine();
 Console.WriteLine("Создан  массив :");
 PrintArray(arr);
-int[] oddArray = OddArray(arr);
-Console.WriteLine("новый массив :");
-PrintArray(oddArray);
+int max = 0;
+int min = 0;
+
+int imax = FindMax(max, arr);
+Console.WriteLine("максимальное значение в массиве :");
+Console.WriteLine(imax);
+int imin = FindMin(min, arr);
+Console.WriteLine("минимальное значение в массиве :");
+Console.WriteLine(imin);
+int result = imax - imin;
+Console.WriteLine("Разница между максимальным значением и минимальным равна :");
+Console.WriteLine(result);
