@@ -5,20 +5,50 @@
 
 // 1, -7, 567, 89, 223-> 3
 
-Console.Write("Введите элементы(через пробел): ");
-int[] arr = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
-int count = 0;
- 
-for (int i = 0; i < arr.Length; i++)
+double[] CreateAndFillArray()   // метод создания и наполнения массива
 {
-    if (arr[i] > 0)
+    //Random rmd = new Random();                      // если заполнение масссива рандомными числами
+    int size = Convert.ToInt32(Console.ReadLine());
+    double[] array = new double[size];
+    // for (int i = 0; i < array.Length; i++)
+    // {
+    //     array[i] = rmd.Next(-100, 101);
+    // }
+    // return array;
+
+    for (int i = 0; i < array.Length; i++)
     {
-        count++;
+        Console.Write($"Введите элемент массива №{i}: ");
+        array[i] = Convert.ToInt32(Console.ReadLine());
     }
+    return array;
 }
- 
-Console.WriteLine($"Кол-во элементов > 0: {count}");
 
+void PrintArray(double[] array)
+{
+    Console.WriteLine("[" + String.Join(",", array) + "]");
+    // Console.Write("[");                      // та же запись но длинная
+    // for (int i = 0; i < array.Length; i++)
+    // {
+    //     if (i < array.Length - 1)
+    //         Console.Write($"{array[i]},");
+    //     else
+    //         Console.Write($"{array[i]}");
+    // }
+    // Console.WriteLine("]");
+}
 
-
-
+void Task()
+{
+    Console.Clear();
+    Console.Write("Введите размер массива: ");
+    double[] array = CreateAndFillArray();
+    PrintArray(array);
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] > 0) count++;
+    }
+    Console.WriteLine("Чисел больше 0: " + count);
+}
+Task();
