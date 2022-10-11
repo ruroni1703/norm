@@ -37,4 +37,31 @@ Print(size);
 
 
 
+void PrintArray(double[] array)
+{
+    Console.WriteLine("[" + String.Join(",", array) + "]");
+    // Console.Write("[");                      // та же запись но длинная
+    // for (int i = 0; i < array.Length; i++)
+    // {
+    //     if (i < array.Length - 1)
+    //         Console.Write($"{array[i]},");
+    //     else
+    //         Console.Write($"{array[i]}");
+    // }
+    // Console.WriteLine("]");
+}
 
+void Task()
+{
+    Console.Clear();
+    Console.Write("Введите размер массива: ");
+    double[] array = CreateAndFillArray();
+    PrintArray(array);
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] > 0) count++;
+    }
+    Console.WriteLine("Чисел больше 0: " + count);
+}
+Task();
