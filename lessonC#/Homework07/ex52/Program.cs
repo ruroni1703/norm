@@ -27,7 +27,7 @@ void Zadacha52()
             sumSrAr = sumSrAr + matrix[i, j];
 
         }
-        double result = sumSrAr / matrix.GetLength(1);
+        double result = sumSrAr / matrix.GetLength(0);
         Console.WriteLine($"Средне арифмитическое столбца {j} :");
         Console.WriteLine(Math.Round(result, 2));
     }
@@ -65,3 +65,4 @@ void PrintArray(int[,] matrix)
 
 
 Zadacha52();
+
