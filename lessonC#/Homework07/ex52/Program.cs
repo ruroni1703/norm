@@ -11,24 +11,27 @@ void Zadacha52()
 {
     Random random = new Random();
     int rows = random.Next(3, 5);
-    int colums = random.Next(3, 5);   
+    int colums = random.Next(3, 5);
     Console.WriteLine($"Размер массива {rows}x{colums}");
     int[,] matrix = new int[rows, colums];
-    int sumSrAr = 0;
+
     Console.WriteLine("Исходный массив :");
     FillArray(matrix);
     PrintArray(matrix);
 
-    for (int j = 0; j < colums; j++)
+    for (int j = 0; j < matrix.GetLength(1); j++)
     {
-        for (int i = 0; i < rows; i++)
+        double sumSrAr = 0;
+        for (int i = 0; i < matrix.GetLength(0); i++)
         {
-            sumSrAr = (sumSrAr + matrix[i, j]) / j;
+            sumSrAr = sumSrAr + matrix[i, j];
+
         }
+        double result = sumSrAr / matrix.GetLength(1);
+        Console.WriteLine($"Средне арифмитическое столбца {j} :");
+        Console.WriteLine(Math.Round(result, 2));
     }
-    Console.WriteLine(sumSrAr);
-    
-    
+
 }
 
 void FillArray(int[,] matrix) // метод заполнения массива
