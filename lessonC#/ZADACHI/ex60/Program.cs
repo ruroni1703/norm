@@ -13,8 +13,20 @@ void Zadacha60()
     Console.WriteLine("Исходный массив :");
     FillArray(matrix);
     PrintArray(matrix);
+    int[] counts = new int[10];
 
-    
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < colums; j++)
+        {
+            counts[matrix[i, j]]++;   // проходится по массиву и считает
+        }
+    }
+
+    for (int i = 0; i < 10; i++)
+    {
+        Console.WriteLine($"Количество {i} встречается в массиве {counts[i]} раз.");  // печать
+    }
 
 }
 
@@ -28,7 +40,7 @@ void FillArray(int[,] matrix) // метод заполнения массива
     {
         for (int j = 0; j < colums; j++)
         {
-            matrix[i, j] = random.Next(0, 11);
+            matrix[i, j] = random.Next(0, 10);
         }
     }
 }
