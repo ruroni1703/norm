@@ -74,3 +74,114 @@ void Task()
     PrintArray(array);
 }
 Task();
+
+
+
+Примеры заполнения одномерного и двумерного массивов
+#region Fill & Print
+        static void FillArray(int[] numbers,
+                       int minValue = 0,
+                       int maxValue = 9)
+        {
+            maxValue++;
+            int size = numbers.Length;
+            Random random = new Random();
+            for (int i = 0; i < size; i++)
+            {
+                numbers[i] = random.Next(minValue, maxValue);
+            }
+        }
+
+
+        static void PrintArray(int[] numbers)
+        {
+            int size = numbers.Length;
+            Console.WriteLine("Вывод массива:");
+            for (int i = 0; i < size; i++)
+            {
+                Console.Write(numbers[i] + "  ");
+            }
+            Console.WriteLine();
+        }
+
+        static void FillArray(double[] numbers,
+            int minValue = 0,
+            int maxValue = 9)
+        {
+            maxValue++;
+            int size = numbers.Length;
+            Random random = new Random();
+            for (int i = 0; i < size; i++)
+            {
+                double value = random.NextDouble() * 20 - 10;
+                numbers[i] = Math.Round(value, 2);
+            }
+        }
+
+        static void PrintArray(double[] numbers)
+        {
+            int size = numbers.Length;
+            Console.WriteLine("Вывод массива:");
+            for (int i = 0; i < size; i++)
+            {
+                Console.Write(numbers[i] + "  ");
+            }
+            Console.WriteLine();
+        }
+        static void FillArray(
+            int[,] array,
+            int startNumber = 0,
+            int finishNumber = 10
+        )
+        {
+            int rows = array.GetLength(0);
+            int columns = array.GetLength(1);
+            Random random = new Random();
+            finishNumber++;
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    array[i, j] = random.Next(startNumber, finishNumber);
+                }
+            }
+        }
+
+        static void FillArray(double[,] array)
+        {
+            int rows = array.GetLength(0);
+            int columns = array.GetLength(1);
+            Random random = new Random();
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    array[i, j] = Math.Round(random.NextDouble() * 10 - 5, 2);
+                }
+            }
+        }
+
+        static void PrintArray(int[,] array)
+        {
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    Console.Write(array[i, j] + "\t");
+                }
+                Console.WriteLine(" ");
+            }
+        }
+
+        static void PrintArray(double[,] array)
+        {
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    Console.Write(array[i, j] + "\t");
+                }
+                Console.WriteLine(" ");
+            }
+        }
+        #endregion

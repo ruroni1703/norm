@@ -6,7 +6,7 @@ int n = Convert.ToInt32(Console.ReadLine());
 FindNatural(n);
 void FindNatural(int n, int a = 0)
 {
-    a++;
+    n++;
     Console.WriteLine(a);
     if (a >= n)
     {
@@ -15,3 +15,6 @@ void FindNatural(int n, int a = 0)
  
     FindNatural(n,a);
 }
+
+// n--
+// Console.WriteLine(n)  // если надо вывести числа от N до 1

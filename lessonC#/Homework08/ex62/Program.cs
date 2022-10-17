@@ -14,9 +14,7 @@ void Zadacha62()
     Console.WriteLine($"Размер массива {rows}x{colums}");
     int[,] matrix = new int[rows, colums];
 
-    Console.WriteLine("Исходный массив :");
-    FillArray(matrix);
-    PrintArray(matrix);
+    
     int index = 0;
     int currentRow = 0;    //текущая строка
     int currentColum = 0;
@@ -28,23 +26,25 @@ void Zadacha62()
     while (index < matrix.Length)
     {
 
-        matrix[currentRow, currentColum] = +1;
+        matrix[currentRow, currentColum] = index +1;
         //Console.Write(matrix[currentRow,currentColum] + " ");
         index++;
         steps--;    // шаги отнимаем
         if (steps == 0)
         {
-            steps = colums - 1;
+            //if (turn % 2 == 0)                 // это условие если матрица не квадратная
+            //steps = rows - 1 - turn/2;
+            steps = colums - 1 - turn/2;
             int temp = changeIndexRow;
             changeIndexRow = changeIndexColum;
-            changeIndexColum = temp - 1;
+            changeIndexColum = -temp;
             turn++;
         }
 
         currentRow += changeIndexRow;
         currentColum += changeIndexColum;
     }
-
+PrintArray(matrix);
 }
 
 void FillArray(int[,] matrix) // метод заполнения массива
