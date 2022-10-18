@@ -17,6 +17,19 @@
 // 3 распечатать этот массив
 // 4 создать метод проверки для символом
 // 5 распечатать получившийся массив
+// char symbol = 'f';
+// bool flag = symbol >= '0' && symbol <= '9';
+// Console.WriteLine($"flag {flag}")
+string symbol = "123456789qwertyuiop[]asdfghjkl;'zxcvbnm,.QWERTYUIOP[]ASDFGHJKL;'\ZXCVBNM,./";
+Random random = new Random();
+char GetRandomChar()
+{
+    var index = random.Next(symbol.Length);
+    return symbol[index];
+}
+spli
+
+
 
 
 string[] array = { "a, f, 4, 5, 6, f, a, 7, m, l, g"};
